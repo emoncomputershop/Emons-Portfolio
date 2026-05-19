@@ -3,10 +3,10 @@
 
 <head>
 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0"/>
 
   <title>Emon's Creative Hub</title>
 
@@ -19,7 +19,7 @@
         href="https://fonts.gstatic.com"
         crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap"
         rel="stylesheet">
 
   <!-- FONT AWESOME -->
@@ -27,7 +27,7 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-  <!-- AOS ANIMATION -->
+  <!-- AOS -->
 
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
         rel="stylesheet"/>
@@ -45,7 +45,7 @@
 
       font-family:'Poppins',sans-serif;
 
-      background:#060112;
+      background:#070112;
 
       color:white;
 
@@ -122,9 +122,9 @@
       justify-content:space-between;
       align-items:center;
 
-      background:rgba(10,2,25,0.6);
+      background:rgba(8,2,25,0.6);
 
-      backdrop-filter:blur(15px);
+      backdrop-filter:blur(16px);
 
       border-bottom:1px solid rgba(255,255,255,0.08);
 
@@ -137,23 +137,124 @@
 
       background:rgba(5,1,15,0.95);
 
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      box-shadow:0 10px 35px rgba(0,0,0,0.4);
     }
+
+    /* ===================== */
+    /* LOGO */
+    /* ===================== */
 
     .logo{
 
-      font-size:30px;
-      font-weight:800;
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo-icon{
+
+      width:58px;
+      height:58px;
+
+      border-radius:18px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:linear-gradient(
+        135deg,
+        #7b2cff,
+        #ff00ea
+      );
+
+      box-shadow:0 10px 30px rgba(179,76,255,0.4);
+
+      position:relative;
+
+      overflow:hidden;
+    }
+
+    .logo-icon::before{
+
+      content:'';
+
+      position:absolute;
+
+      width:120%;
+      height:120%;
 
       background:linear-gradient(
         45deg,
-        #b34cff,
-        #ff4fd8
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+      );
+
+      transform:rotate(35deg);
+
+      top:-120%;
+      left:-120%;
+
+      animation:shine 4s infinite;
+    }
+
+    @keyframes shine{
+
+      100%{
+        top:120%;
+        left:120%;
+      }
+
+    }
+
+    .logo-icon i{
+
+      font-size:26px;
+
+      color:white;
+    }
+
+    .logo-text{
+
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+
+    .logo-text span{
+
+      font-family:'Orbitron',sans-serif;
+
+      font-size:28px;
+
+      font-weight:800;
+
+      letter-spacing:1px;
+
+      background:linear-gradient(
+        45deg,
+        #ffffff,
+        #d08cff,
+        #ff5ce5
       );
 
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
+
+    .logo-text small{
+
+      font-size:11px;
+
+      letter-spacing:3px;
+
+      color:#b9a5ff;
+
+      margin-top:6px;
+    }
+
+    /* NAV LINKS */
 
     .nav-links{
 
@@ -164,11 +265,11 @@
 
     .nav-links a{
 
-      position:relative;
-
       padding:12px 18px;
 
       border-radius:14px;
+
+      position:relative;
 
       overflow:hidden;
 
@@ -207,7 +308,7 @@
       transform:translateY(-4px);
     }
 
-    /* MENU BUTTON */
+    /* MENU */
 
     .menu-btn{
 
@@ -246,7 +347,7 @@
 
       flex-wrap:wrap;
 
-      padding-top:140px;
+      padding-top:150px;
     }
 
     .hero-text{
@@ -328,13 +429,13 @@
       font-weight:600;
 
       transition:.4s;
+
+      box-shadow:0 10px 30px rgba(179,76,255,0.35);
     }
 
     .btn:hover{
 
       transform:translateY(-5px);
-
-      box-shadow:0 15px 35px rgba(179,76,255,0.4);
     }
 
     .btn-outline{
@@ -587,135 +688,64 @@
       line-height:1.8;
     }
 
-    <!-- SKILLS -->
+    /* SKILLS */
 
-<section id="skills">
+    .skills-box{
 
-  <div class="section-title"
-       data-aos="zoom-in">
+      padding:40px;
 
-    <h2>
-      My
-      <span>Skills</span>
-    </h2>
+      border-radius:30px;
+    }
 
-  </div>
+    .skill{
+      margin-bottom:30px;
+    }
 
-  <div class="skills-box glass"
-       data-aos="fade-up">
+    .skill-top{
 
-    <!-- MS WORD -->
+      display:flex;
 
-    <div class="skill">
+      justify-content:space-between;
 
-      <div class="skill-top">
+      margin-bottom:10px;
+    }
 
-        <span>MS Word</span>
-        <span>95%</span>
+    .bar{
 
-      </div>
+      width:100%;
+      height:14px;
 
-      <div class="bar">
+      background:#241144;
 
-        <div class="fill"
-             style="width:95%">
-        </div>
+      border-radius:50px;
 
-      </div>
+      overflow:hidden;
+    }
 
-    </div>
+    .fill{
 
-    <!-- MS EXCEL -->
+      height:100%;
 
-    <div class="skill">
+      border-radius:50px;
 
-      <div class="skill-top">
+      background:linear-gradient(
+        90deg,
+        #7b2cff,
+        #ff00ea
+      );
 
-        <span>MS Excel</span>
-        <span>95%</span>
+      animation:load 2s ease;
+    }
 
-      </div>
+    @keyframes load{
 
-      <div class="bar">
+      from{
+        width:0;
+      }
 
-        <div class="fill"
-             style="width:95%">
-        </div>
+    }
 
-      </div>
-
-    </div>
-
-    <!-- POWERPOINT -->
-
-    <div class="skill">
-
-      <div class="skill-top">
-
-        <span>MS PowerPoint</span>
-        <span>92%</span>
-
-      </div>
-
-      <div class="bar">
-
-        <div class="fill"
-             style="width:92%">
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- PHOTOSHOP -->
-
-    <div class="skill">
-
-      <div class="skill-top">
-
-        <span>Adobe Photoshop</span>
-        <span>94%</span>
-
-      </div>
-
-      <div class="bar">
-
-        <div class="fill"
-             style="width:94%">
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- WEB BROWSING -->
-
-    <div class="skill">
-
-      <div class="skill-top">
-
-        <span>Web Browsing</span>
-        <span>98%</span>
-
-      </div>
-
-      <div class="bar">
-
-        <div class="fill"
-             style="width:98%">
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-    /* ===================== */
     /* CONTACT */
-    /* ===================== */
 
     .contact-grid{
 
@@ -740,36 +770,6 @@
       text-align:center;
 
       transition:.5s;
-    }
-
-    .contact-card::before{
-
-      content:'';
-
-      position:absolute;
-
-      width:140%;
-      height:140%;
-
-      background:linear-gradient(
-        45deg,
-        transparent,
-        rgba(255,255,255,0.08),
-        transparent
-      );
-
-      top:-120%;
-      left:-120%;
-
-      transform:rotate(25deg);
-
-      transition:.8s;
-    }
-
-    .contact-card:hover::before{
-
-      top:100%;
-      left:100%;
     }
 
     .contact-card:hover{
@@ -998,8 +998,8 @@
         padding:80px 5%;
       }
 
-      .logo{
-        font-size:22px;
+      .logo-text span{
+        font-size:20px;
       }
 
       .hero-text h1{
@@ -1074,6 +1074,15 @@
         width:100%;
       }
 
+      .logo-text span{
+        font-size:17px;
+      }
+
+      .logo-icon{
+        width:48px;
+        height:48px;
+      }
+
     }
 
   </style>
@@ -1087,7 +1096,21 @@
   <nav id="navbar">
 
     <div class="logo">
-      Emon's Creative Hub
+
+      <div class="logo-icon">
+
+        <i class="fa-solid fa-bolt"></i>
+
+      </div>
+
+      <div class="logo-text">
+
+        <span>Emon's Creative Hub</span>
+
+        <small>DIGITAL CREATOR</small>
+
+      </div>
+
     </div>
 
     <div class="menu-btn"
@@ -1121,7 +1144,8 @@
       <h3>Hello, I'm</h3>
 
       <h1>
-        Emon
+        Emon's
+        <span>Creative Hub</span>
       </h1>
 
       <h2>
@@ -1228,10 +1252,9 @@
 
         <p>
 
-          I am a passionate Digital Operation Assistant from Narsingdi, Bangladesh.
-
-          I work with Photoshop editing, printing, typing, online applications, digital services and customer support. 
-
+          I work with Photoshop editing,
+          online applications, printing,
+          typing, photocopy and digital services.
 
         </p>
 
@@ -1257,69 +1280,54 @@
 
     <div class="service-grid">
 
-      <div class="service-card glass"
-           data-aos="fade-up">
+      <div class="service-card glass">
 
-        <i class="fa-solid fa-pen-nib"></i>
+        <i class="fa-solid fa-image"></i>
 
         <h3>Photoshop Expert</h3>
 
         <p>
-
-          Professional editing,
-          retouching and creative works.
-
+          Professional photo editing,
+          retouching and design work.
         </p>
 
       </div>
 
-      <div class="service-card glass"
-           data-aos="fade-up"
-           data-aos-delay="100">
-
-        <i class="fa-solid fa-print"></i>
-
-        <h3>Print & Photocopy</h3>
-
-        <p>
-
-          Printing, scanning,
-          photocopy and support services.
-
-        </p>
-
-      </div>
-
-      <div class="service-card glass"
-           data-aos="fade-up"
-           data-aos-delay="200">
+      <div class="service-card glass">
 
         <i class="fa-solid fa-globe"></i>
 
         <h3>Online Applications</h3>
 
         <p>
-
-          Passport, NID,
-          Birth Certificate and all services.
-
+          NID, Passport, Birth Certificate
+          and all online services.
         </p>
 
       </div>
 
-      <div class="service-card glass"
-           data-aos="fade-up"
-           data-aos-delay="300">
+      <div class="service-card glass">
+
+        <i class="fa-solid fa-print"></i>
+
+        <h3>Print & Photocopy</h3>
+
+        <p>
+          Printing, scanning,
+          photocopy and document support.
+        </p>
+
+      </div>
+
+      <div class="service-card glass">
 
         <i class="fa-solid fa-keyboard"></i>
 
         <h3>Typing & Composition</h3>
 
         <p>
-
-          Bangla & English typing,
-          formatting and data entry.
-
+          Bangla and English typing,
+          formatting and composition.
         </p>
 
       </div>
@@ -1342,14 +1350,13 @@
 
     </div>
 
-    <div class="skills-box glass"
-         data-aos="fade-up">
+    <div class="skills-box glass">
 
       <div class="skill">
 
         <div class="skill-top">
 
-          <span>Photoshop</span>
+          <span>MS Word</span>
           <span>95%</span>
 
         </div>
@@ -1366,14 +1373,14 @@
 
         <div class="skill-top">
 
-          <span>MS Word</span>
-          <span>90%</span>
+          <span>MS Excel</span>
+          <span>95%</span>
 
         </div>
 
         <div class="bar">
           <div class="fill"
-               style="width:90%">
+               style="width:95%">
           </div>
         </div>
 
@@ -1383,14 +1390,48 @@
 
         <div class="skill-top">
 
-          <span>Canva</span>
-          <span>88%</span>
+          <span>MS PowerPoint</span>
+          <span>92%</span>
 
         </div>
 
         <div class="bar">
           <div class="fill"
-               style="width:88%">
+               style="width:92%">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="skill">
+
+        <div class="skill-top">
+
+          <span>Adobe Photoshop</span>
+          <span>94%</span>
+
+        </div>
+
+        <div class="bar">
+          <div class="fill"
+               style="width:94%">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="skill">
+
+        <div class="skill-top">
+
+          <span>Web Browsing</span>
+          <span>98%</span>
+
+        </div>
+
+        <div class="bar">
+          <div class="fill"
+               style="width:98%">
           </div>
         </div>
 
@@ -1404,8 +1445,7 @@
 
   <section id="contact">
 
-    <div class="section-title"
-         data-aos="zoom-in">
+    <div class="section-title">
 
       <h2>
         Contact
@@ -1416,10 +1456,7 @@
 
     <div class="contact-grid">
 
-      <!-- PHONE -->
-
-      <div class="contact-card glass"
-           data-aos="fade-up">
+      <div class="contact-card glass">
 
         <div class="contact-icon">
 
@@ -1427,7 +1464,7 @@
 
         </div>
 
-        <h3>Call Me</h3>
+        <h3>Phone</h3>
 
         <p>
           +8801797116095
@@ -1442,11 +1479,7 @@
 
       </div>
 
-      <!-- EMAIL -->
-
-      <div class="contact-card glass"
-           data-aos="fade-up"
-           data-aos-delay="100">
+      <div class="contact-card glass">
 
         <div class="contact-icon">
 
@@ -1469,11 +1502,7 @@
 
       </div>
 
-      <!-- FACEBOOK -->
-
-      <div class="contact-card glass"
-           data-aos="fade-up"
-           data-aos-delay="200">
+      <div class="contact-card glass">
 
         <div class="contact-icon">
 
@@ -1497,11 +1526,7 @@
 
       </div>
 
-      <!-- WHATSAPP -->
-
-      <div class="contact-card glass"
-           data-aos="fade-up"
-           data-aos-delay="300">
+      <div class="contact-card glass">
 
         <div class="contact-icon">
 
@@ -1512,7 +1537,7 @@
         <h3>WhatsApp</h3>
 
         <p>
-          Chat Directly On WhatsApp
+          Direct WhatsApp Chat
         </p>
 
         <a href="https://wa.me/8801797116095"
@@ -1538,7 +1563,7 @@
 
   </footer>
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- WHATSAPP -->
 
   <a href="https://wa.me/8801797116095"
      class="whatsapp"
@@ -1558,8 +1583,6 @@
       duration:1000,
       once:true
     });
-
-    /* MOBILE MENU */
 
     const menuBtn =
     document.getElementById("menuBtn");
@@ -1587,8 +1610,6 @@
 
     };
 
-    /* CLOSE MENU */
-
     document.querySelectorAll(".nav-links a")
     .forEach(link => {
 
@@ -1602,8 +1623,6 @@
       });
 
     });
-
-    /* NAVBAR SCROLL */
 
     window.addEventListener("scroll", () => {
 
